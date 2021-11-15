@@ -10,6 +10,7 @@ import { IdTokenProvider } from "./components/ContextAPI/IdToken";
 import AxiosUse from "./Axioos";
 import FetchUse from "./pages/FetchUse";
 import AuthUse from "./pages/AuthUse";
+import FormDataUse from "./formDataUse";
 
 const AuthPage = React.lazy(() => import("./pages/AuthPage"));
 const UserProfile = React.lazy(() =>
@@ -21,10 +22,11 @@ function App() {
   return (
 
     <Layout>
-
+     
         <AuthUse/>
       {/* <AxiosUse/> */}
       <FetchUse/>
+      <FormDataUse/>
       <Suspense fallback={<h2>Loading...</h2>}>
         <Switch>
           <Route path="/" exact>
